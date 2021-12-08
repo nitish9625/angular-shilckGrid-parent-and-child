@@ -1,0 +1,7 @@
+<button class="btn btn-success mt-4" (click)="shiwChild()">Click To Show Data</button>
+
+<div class="container" *ngFor="let item of dataSend">
+    <img [src]="item.avatar">
+    <p>{{item.first_name}}  {{item.last_name}}</p>
+</div>
+

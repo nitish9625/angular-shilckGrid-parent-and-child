@@ -1,0 +1,8 @@
+<div class="container">
+    <div *ngIf="childData != null">
+        <p>id {{childData?.id}}</p>
+        <p><b>Name: {{childData?.name}}</b></p>
+    </div>
+    
+</div>
+<child-app [dataSend]="apiData?.data" (parentToChild)="getChild($event)"></child-app>

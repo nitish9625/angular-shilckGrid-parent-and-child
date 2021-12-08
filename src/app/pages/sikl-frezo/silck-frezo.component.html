@@ -1,0 +1,30 @@
+<h1>Silck Grid Working</h1>
+<div class="loader text-center" *ngIf="loader">
+  <loader-app></loader-app>
+</div>
+<div class="col-2" *ngIf="!loader">
+  <label for="pinned-rows">Pinned Rows: </label>
+  <input id="pinned-rows" class="form-control" type="number" [(ngModel)]="frozenRowCount">
+</div>
+<div class="col-auto gr-2">
+  <button class="btn btn-outline-secondary btn-sm" (click)="changeforezenRowCount()">
+    Set
+  </button>
+</div>
+
+<div class="col-2">
+  <label for="pinned-rows">Pinned Columns: </label>
+  <input id="pinned-rows" class="form-control" type="number" [(ngModel)]="frozenColumnCount">
+</div>
+<div class="col-auto gr-2">
+  <button class="btn btn-outline-secondary btn-sm" (click)="changeForezenColumnCount()">
+    Set
+  </button>
+</div>
+
+<angular-slickgrid gridId="grid20"
+                     gridWidth="875"
+                     [columnDefinitions]="columnDefinitions"
+                     [gridOptions]="gridOptions"
+                     [dataset]="dataset">
+  </angular-slickgrid>

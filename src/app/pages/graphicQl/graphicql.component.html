@@ -1,0 +1,11 @@
+<div *ngIf="loading">
+  <loader-app></loader-app>
+  </div>
+  <div *ngIf="error">
+    Error :(
+  </div>
+  <div *ngIf="rates">
+    <div *ngFor="let rate of rates">
+      <p>{{ rate.currency }}: {{ rate.rate }}: {{rate.name}}</p>
+    </div>
+  </div>
